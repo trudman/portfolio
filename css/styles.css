@@ -6,13 +6,13 @@
 }
 
 body {
-  height: 200vh;
+  background-image: linear-gradient(white, #959481);
 }
 
 .hero {
-  height: 75vh;
+  height: 100vh;
   width: 100%;
-  background-image: url(../images/space.jpg);
+  background-image: url(../images/lake.jpg);
   background-position: center;
   background-size: cover;
   display: flex;
@@ -22,7 +22,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height: 5rem;
+  height: 3.5rem;
   top: 0;
   position: fixed;
   width: 100%;
@@ -30,10 +30,10 @@ nav {
 }
 
 .logo {
-  color: white;
+  color: #a09f8d;
   font-size: 40px;
   letter-spacing: 1px;
-  text-shadow: 1px 1px 1px purple;
+  text-shadow: 1px 1px 1px black;
 }
 
 nav ul li {
@@ -43,14 +43,14 @@ nav ul li {
 }
 
 nav ul li a {
-  color: white;
+  color: black;
   text-decoration: none;
   font-weight: bold;
   text-transform: capitalize;
 }
 
 nav ul li a:hover {
-  color: black;
+  text-decoration: underline;
   transition: 0.4s;
 }
 
@@ -74,22 +74,23 @@ nav ul li a:hover {
   justify-content: center;
   align-items: center;
   width: 20%;
-  font-size: 200%;
-  color: white;
+  font-size: 30px;
+  color: black;
+  text-decoration: underline;
 }
 
-.about-text {
+#about-text {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  color: white;
+  color: black;
   width: 80%;
   padding: 3rem;
 }
 
-.about-text img {
+#about-text img {
   height: auto;
-  max-width: 275px;
+  max-width: 300px;
   float: right;
   margin-right: 25px;
   border: solid transparent;
@@ -105,15 +106,15 @@ nav ul li a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 18px;
+  font-size: 30px;
 }
 
 .projects {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 80%;
   flex-wrap: wrap;
-  padding: 4rem;
+  padding: 5rem;
 }
 
 .projects img {
@@ -121,30 +122,17 @@ nav ul li a:hover {
 }
 
 .projects a:hover {
-  transform: scale(1.07);
-  opacity: 0.5;
-}
-
-body {
-  background-image: linear-gradient(rgb(28, 4, 60) 20%, black);
-}
-
-.contact {
-  width: 20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 200%;
-  color: white;
-  width: 20%;
+  transform: scale(1.01);
+  opacity: 0.7;
 }
 
 .info {
   width: 80%;
   display: flex;
-  color: white;
+  color: black;
   justify-content: center;
   padding: 20px;
+  text-decoration: none;
 }
 
 .info ul li {
@@ -155,6 +143,32 @@ body {
 }
 
 footer {
-  color: white;
+  color: whitesmoke;
   text-align: center;
+  margin-top: 10px;
+  border: solid 2px black;
+  background-color: black;
+  padding: 5px;
+}
+
+@media screen and (max-width: 850px) {
+  .navbar,
+  .btn,
+  .center,
+  .about,
+  body {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+  }
+  .logo {
+    position: relative;
+    margin-top: 100px;
+  }
+
+  #about,
+  #about-text {
+    flex-direction: column;
+  }
 }
