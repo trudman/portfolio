@@ -16,17 +16,18 @@ body {
   background-position: center;
   background-size: cover;
   display: flex;
+  margin-top: 0;
 }
 
-nav {
+.navbar {
   display: flex;
   align-items: center;
   justify-content: space-around;
   height: 3.5rem;
   top: 0;
-  position: fixed;
   width: 100%;
   backdrop-filter: blur(8px);
+  position: fixed;
 }
 
 .logo {
@@ -170,5 +171,13 @@ footer {
   #about,
   #about-text {
     flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .navbar {
+    position: static;
+    top: unset;
+    background-color: black;
   }
 }
